@@ -1,5 +1,5 @@
 set nu
-set numberwidth=8
+set numberwidth=10
 colorscheme murphy
 setlocal shiftwidth=4
 setlocal softtabstop=4
@@ -15,3 +15,7 @@ autocmd BufReadPost *.go let b:commentCommand='I// '
 autocmd BufReadPost *.go let b:unCommentCommand='^xxx'
 autocmd BufReadPost *.py let b:commentCommand='I# '
 autocmd BufReadPost *.py let b:unCommentCommand='^xx'
+
+call plug#begin('~/.vim/plugged')
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+call plug#end()

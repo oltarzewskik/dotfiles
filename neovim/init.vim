@@ -18,4 +18,16 @@ autocmd BufReadPost *.py let b:unCommentCommand='^xx'
 
 call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'lervag/vimtex'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
+
+" Config for LaTeX
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+" Rmarkdown
+autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>

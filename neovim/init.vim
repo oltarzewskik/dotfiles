@@ -30,4 +30,4 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 " Rmarkdown
-autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+autocmd FileType rmd map <F5> :update <bar> !echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>

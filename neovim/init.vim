@@ -21,6 +21,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'lervag/vimtex'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'scrooloose/nerdtree'
+Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
 " Config for LaTeX

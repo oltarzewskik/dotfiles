@@ -1,5 +1,5 @@
 set nu
-set numberwidth=10
+set numberwidth=7
 colorscheme murphy
 setlocal shiftwidth=4
 setlocal softtabstop=4
@@ -21,9 +21,20 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'lervag/vimtex'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'scrooloose/nerdtree'
-Plug 'jlanzarotta/bufexplorer'
+Plug 'scrooloose/nerdtree'  " :NERDTree to start
+Plug 'jistr/vim-nerdtree-tabs'  " :NERDTreeTabsToggle to start
+Plug 'jlanzarotta/bufexplorer' " type \be
 call plug#end()
+
+" Config for tabs
+nnoremap ts :tabnew<enter>
+nnoremap tn :tabnext<enter>
+nnoremap tp :tabprev<enter>
+nnoremap tf :tabfirst<enter>
+nnoremap tl :tablast<enter>
+
+" Config for nerdtree-tabs
+nnoremap NTTT :NERDTreeTabsToggle<enter>
 
 " Config for LaTeX
 let g:tex_flavor='latex'

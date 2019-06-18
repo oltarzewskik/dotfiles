@@ -24,6 +24,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'scrooloose/nerdtree'  " :NERDTree to start
 Plug 'jistr/vim-nerdtree-tabs'  " :NERDTreeTabsToggle to start
 Plug 'jlanzarotta/bufexplorer' " type \be
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 " Config for tabs

@@ -12,3 +12,4 @@ Enter neovim and then execute:
 
 `:PlugInstall`
 
+And install `ack` by package manager for example by that: `sudo apt-get install ack`

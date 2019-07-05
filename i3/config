@@ -39,8 +39,16 @@ bindsym $mod+Return exec st
 # start chromium
 bindsym $mod+c exec chromium
 
+# start pomodoro timer
+bindsym $mod+p exec gnome-pomodoro
+
 # kill focused window
 bindsym $mod+q kill
+
+# increse or decrese volume
+bindsym XF86AudioRaiseVolume exec amixer set 'Master' 5%+
+
+bindsym XF86AudioLowerVolume exec amixer set 'Master' 5%-
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -156,3 +164,4 @@ bindsym $mod + Shift + o resize grow width 7 px or 7 ppt
 #bar {
 #        status_command i3status
 #}
+

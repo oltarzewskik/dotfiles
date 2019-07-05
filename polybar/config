@@ -2,11 +2,11 @@
 background = #222
 modules-left = i3
 modules-center = time
-modules-right = pulseaudio battery date
+modules-right = battery date pulseaudio
 
 [module/date]
 type = internal/date
-date = " | %Y-%m-%d"
+date = " | %Y-%m-%d | "
 
 [module/time]
 type = internal/date
@@ -29,6 +29,8 @@ full-at = 98
 battery = BAT0
 adapter = ADP1
 
-;[module/pulseaudio]
-;type = internal/pulseaudio
-;sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+use-ui-max = true
+interval = 5

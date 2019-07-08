@@ -29,7 +29,7 @@ font pango:monospace 13
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-exec --no-startup-id feh --bg-scale '/home/karol/Downloads/hubble.jpg'
+exec --no-startup-id feh --bg-scale '/home/karol/Downloads/city_scape.jpg'
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 new_window 1pixel
 gaps inner 20
@@ -164,4 +164,5 @@ bindsym $mod + Shift + o resize grow width 7 px or 7 ppt
 #bar {
 #        status_command i3status
 #}
+
 

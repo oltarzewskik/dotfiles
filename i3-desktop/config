@@ -29,11 +29,26 @@ font pango:monospace 13
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-exec --no-startup-id feh --bg-scale '/home/karol/Downloads/city_scape.jpg'
+exec --no-startup-id compton
+exec --no-startup-id feh --bg-scale '/home/karol/Downloads/iceland.jpg'
 exec_always --no-startup-id $HOME/.config/polybar/start.sh
 bindsym $mod+p move workspace to output right
 new_window 1pixel
-gaps inner 20
+gaps inner 10
+for_window [class="^.*"] border pixel 5
+client.focused #228b22 #228b22 #228b22 #228b22
+
+# rofi-virtualbox
+bindsym $mod+Shift+v exec rofi-virtualbox
+
+# Suspend
+bindsym $mod+Pause exec systemctl suspend
+
+# Reboot
+bindsym $mod+Shift+Home exec systemctl reboot
+
+# Poweroff
+bindsym $mod+Shift+End exec systemctl poweroff
 
 # start a terminal
 bindsym $mod+Return exec konsole
@@ -50,7 +65,7 @@ bindsym $mod+equal exec amixer set 'Master' 5%+
 bindsym $mod+minus exec amixer set 'Master' 5%-
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -145,8 +160,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # current monitor setup
 
-set $firstM = HDMI-0
-set $secondM = DP-0
+set $firstM = HDMI-1
+set $secondM = DP-1
 
 workspace 1 output $firstM
 workspace 2 output $firstM
@@ -179,3 +194,4 @@ bindsym $mod + Shift + o resize grow width 7 px or 7 ppt
 #bar {
 #        status_command i3status
 #}
+

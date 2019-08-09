@@ -3,25 +3,40 @@ background = #222
 modules-left = i3
 modules-center = time
 modules-right = battery date pulseaudio
+font-0 = "Font Awesome 5 Free Regular"
+font-1 = "Sans"
 
 [module/date]
 type = internal/date
-date = " | %Y-%m-%d | "
+date = "%Y-%m-%d | "
+format =  <date>
 
 [module/time]
 type = internal/date
 time = %H:%M:%S
 label = %time%
-
+format =  <label>
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+
 label-focused = %index%
-label-focused-background = #FF0000
+label-focused-background = #228b22
+label-focused-padding = 2
+
 label-unfocused = %index%
+label-unfocused-padding = 2
+
+label-visible = %index%
+label-visible-padding = 2
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+use-ui-max = true
+format-volume =  <label-volume>
 
 [module/battery]
 type = internal/battery
@@ -29,8 +44,3 @@ full-at = 98
 battery = BAT0
 adapter = ADP1
 
-[module/pulseaudio]
-type = internal/pulseaudio
-sink = alsa_output.pci-0000_00_1b.0.analog-stereo
-use-ui-max = true
-interval = 5

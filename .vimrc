@@ -1,6 +1,6 @@
 set nu
 set numberwidth=5
-set timeoutlen=1000 ttimeoutlen=0
+set ttm=0
 colorscheme 256_noir
 set cursorline
 " Disable auto comments

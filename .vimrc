@@ -31,9 +31,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " Map utilities using clipboard
-map <C-y> "+y
-map <C-p> "+p
-map <C-d> "+d
+nnoremap <C-y> "+y
+nnoremap <C-p> "+p
+nnoremap <C-d> "+d
 
 " Config for tabs
 nnoremap ts :tabnew<enter>

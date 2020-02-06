@@ -6,7 +6,7 @@ set cursorline
 " Disable auto comments
 set paste
 
-autocmd Filetype * setlocal shiftwidth=4 softtabstop=4 expandtab
+set shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab

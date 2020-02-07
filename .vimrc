@@ -1,15 +1,16 @@
 set nu
 set numberwidth=5
 set ttm=0
-colorscheme 256_noir
+colorscheme ron
 set cursorline
+
 " Disable auto comments
 set paste
 
-set shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType go setlocal noet ci pi softtabstop=0 shiftwidth=4 tabstop=4 expandtab
 
 " Delete spaces
@@ -31,9 +32,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " Map utilities using clipboard
-nnoremap <C-y> "+y
+map <C-y> "+y
+map <C-d> "+d
 nnoremap <C-p> "+p
-nnoremap <C-d> "+d
 
 " Config for tabs
 nnoremap ts :tabnew<enter>

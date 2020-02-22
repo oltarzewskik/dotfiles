@@ -1,5 +1,6 @@
 set nu
-set numberwidth=5
+"set numberwidth=1
+set relativenumber
 set ttm=0
 colorscheme ron
 set cursorline
@@ -30,6 +31,10 @@ Plug 'jlanzarotta/bufexplorer' " type \be
 Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
+
+" Resize window
+nnoremap <C-k> :resize +3<enter>
+nnoremap <C-j> :resize -3<enter>
 
 " Map utilities using clipboard
 map <C-y> "+y

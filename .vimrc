@@ -1,12 +1,15 @@
 set nu
-"set numberwidth=1
 set relativenumber
 set ttm=0
 colorscheme ron
 set cursorline
+set hlsearch
 
 " Disable auto comments
 set paste
+
+" Use X primary
+set clipboard=unnamed
 
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
@@ -30,16 +33,12 @@ Plug 'jistr/vim-nerdtree-tabs' " :NERDTreeTabsToggle to start
 Plug 'jlanzarotta/bufexplorer' " type \be
 Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Resize window
 nnoremap <C-k> :resize +3<enter>
 nnoremap <C-j> :resize -3<enter>
-
-" Map utilities using clipboard
-map <C-y> "+y
-map <C-d> "+d
-nnoremap <C-p> "+p
 
 " Config for tabs
 nnoremap ts :tabnew<enter>

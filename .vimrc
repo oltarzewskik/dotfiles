@@ -20,6 +20,9 @@ autocmd FileType go setlocal noet ci pi softtabstop=0 shiftwidth=4 tabstop=4 exp
 " Delete spaces
 autocmd BufWrite * %s/\s\+$//e
 
+" Delete last empty newlines
+autocmd BufWrite * silent!%s#\($\n\s*\)\+\%$##
+
 " Don't move cursor if exiting instert mode
 let CursorColumnI = 0 "the cursor column position in INSERT
 autocmd InsertEnter * let CursorColumnI = col('.')

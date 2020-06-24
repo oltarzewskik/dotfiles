@@ -1,5 +1,7 @@
 set nu
-set relativenumber
+set ttymouse=sgr
+set mouse=a
+"set relativenumber
 set ttm=0
 colorscheme ron
 set cursorline
@@ -8,8 +10,14 @@ set hlsearch
 " Disable auto comments
 set paste
 
-" Use X primary
-set clipboard=unnamed
+" Use clipboard
+set clipboard=unnamedplus
+
+" Disable overriding clipboard
+nnoremap d "_d
+vnoremap d "_d
+nnoremap x "_x
+vnoremap x "_x
 
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
@@ -37,6 +45,7 @@ Plug 'jlanzarotta/bufexplorer' " type \be
 Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " Resize window

@@ -10,8 +10,8 @@ set hlsearch
 " Disable auto comments
 set paste
 
-" Use clipboard
-set clipboard=unnamedplus
+" Use primary (unnamedplus for clipboard)
+set clipboard=unnamed
 
 " Disable overriding clipboard
 nnoremap d "_d

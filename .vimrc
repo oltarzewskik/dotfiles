@@ -46,6 +46,7 @@ Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'dkprice/vim-easygrep'
 call plug#end()
 
 " Resize window

@@ -44,17 +44,18 @@ Plug 'lervag/vimtex'
 Plug 'scrooloose/nerdtree' " :NERDTree to start
 Plug 'jistr/vim-nerdtree-tabs' " :NERDTreeTabsToggle to start
 Plug 'jlanzarotta/bufexplorer' " type \be
-Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'dkprice/vim-easygrep'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tomasiser/vim-code-dark'
 Plug 'ycm-core/YouCompleteMe'
 call plug#end()
+
+" Search command
+command -nargs=1 Search vimgrep /<args>/ ./** | copen
 
 " VSCODE defeault theme
 colorscheme codedark

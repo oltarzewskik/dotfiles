@@ -12,6 +12,8 @@ Enter vim and then execute:
 
 `:PlugInstall`
 
+And follow READMEs of ycm-core/YouCompleteMe, ryanoasis/vim-devicons and maybe something else
+
 And install `ack` by package manager for example by that: `sudo apt-get install ack`
 
 # Symlinks

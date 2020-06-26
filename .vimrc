@@ -1,9 +1,11 @@
+" Use UTF-8
+set encoding=UTF-8
+
 set nu
 set ttymouse=sgr
 set mouse=a
 "set relativenumber
 set ttm=0
-colorscheme ron
 set cursorline
 set hlsearch
 
@@ -46,8 +48,17 @@ Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'dkprice/vim-easygrep'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tomasiser/vim-code-dark'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
+
+" VSCODE defeault theme
+colorscheme codedark
+let g:airline_theme = 'codedark'
 
 " Resize window
 nnoremap <C-k> :resize +3<enter>
@@ -60,7 +71,8 @@ nnoremap tp :tabprev<enter>
 nnoremap tf :tabfirst<enter>
 nnoremap tl :tablast<enter>
 
-" Config for nerdtree-tabs
+" Config for nerdtree
+let NERDTreeMinimalUI = 1
 nnoremap NTTT :NERDTreeTabsToggle<enter>
 
 " Config for LaTeX
